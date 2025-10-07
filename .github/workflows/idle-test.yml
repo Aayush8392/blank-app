@@ -1,0 +1,11 @@
+name: idle-test
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+permissions: {}
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    steps:
+      - run: date -u
